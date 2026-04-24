@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirror Quiz Editor</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0a1020;
+      --panel: #1a2238;
+      --panel-2: #222c45;
+      --text: #edf2ff;
+      --muted: #b7c3e3;
+      --line: rgba(255,255,255,.08);
+      --accent: linear-gradient(90deg, #d79bff, #8fd6ff);
+      --radius: 22px;
+      --gap: 16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #15213d, #070c18 60%);
+      color: var(--text);
+    }
+    .shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: minmax(340px, 520px) 1fr;
+      gap: 24px;
+    }
+    .panel {
+      background: rgba(26,34,56,.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.25);
+    }
+    h1,h2,h3 { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    .controls { display: grid; gap: 12px; }
+    .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+    input, textarea, select {
+      width: 100%;
+      background: #11192f;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .tab {
+      border: 1px solid var(--line);
+      background: #11192f;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .tab.active { background: #273353; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font: inherit;
+      cursor: pointer;
+    }
+    .primary { background: var(--accent); color: #0b1220; font-weight: 700; }
+    .ghost { background: #11192f; color: var(--text); border: 1px solid var(--line); }
+    .stack { display: grid; gap: 18px; }
+    .card {
+      background: rgba(34,44,69,.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: #8fcfff; }
+    .look-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); }
+    .look-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+    }
+    .answer-list { display: grid; gap: 10px; }
+    .answer-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      background: rgba(255,255,255,.03);
+    }
+    .answer-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .tiny { font-size: 12px; color: var(--muted); }
+    .json-box {
+      background: #0b1120;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      white-space: pre-wrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      color: #cfe0ff;
+      max-height: 360px;
+      overflow: auto;
+    }
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="panel">
+      <h1>Mirror Quiz Editor</h1>
+      <p class="muted">Edit the text and variables without spelunking through the logic file.</p>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="meta">Meta</button>
+        <button class="tab" data-tab="questions">Questions</button>
+        <button class="tab" data-tab="results">Results</button>
+      </div>
+
+      <div id="metaTab" class="stack">
+        <label>Quiz title <input id="metaTitle" /></label>
+        <label>Eyebrow <input id="metaEyebrow" /></label>
+        <label>Hero copy <textarea id="metaHero"></textarea></label>
+        <label>Start title <input id="metaStartTitle" /></label>
+        <label>Start copy <textarea id="metaStartCopy"></textarea></label>
+      </div>
+
+      <div id="questionsTab" class="stack" hidden>
+        <div class="row">
+          <label>Select question
+            <select id="questionSelect"></select>
+          </label>
+          <label>Question prompt
+            <textarea id="questionPrompt"></textarea>
+          </label>
+        </div>
+        <div id="answersEditor" class="answer-list"></div>
+      </div>
+
+      <div id="resultsTab" class="stack" hidden>
+        <div class="row">
+          <label>Select result
+            <select id="resultSelect"></select>
+          </label>
+          <label>Title
+            <input id="resultTitle" />
+          </label>
+        </div>
+        <label>Subtitle <input id="resultSubtitle" /></label>
+        <label>Blurb <textarea id="resultBlurb"></textarea></label>
+        <label>Image hints, comma-separated <textarea id="resultHints"></textarea></label>
+      </div>
+
+      <div class="actions">
+        <button id="saveDraft" class="ghost">Save draft in browser</button>
+        <button id="downloadJson" class="primary">Download JSON</button>
+        <button id="resetDraft" class="ghost">Discard draft</button>
+      </div>
+    </section>
+
+    <section class="panel stack">
+      <div class="card">
+        <p class="eyebrow" id="previewEyebrow">Transformation quiz prototype</p>
+        <h2 id="previewTitle">Mirror Archetype Quiz</h2>
+        <p class="muted" id="previewHero"></p>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">Question preview</p>
+        <h2 id="previewQuestionPrompt"></h2>
+        <div id="previewAnswers" class="answer-list"></div>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">Final mirror result</p>
+        <h2 id="previewResultTitle"></h2>
+        <p class="muted" id="previewResultSubtitle"></p>
+        <p id="previewResultBlurb"></p>
+        <div id="previewHints" class="look-grid"></div>
+      </div>
+
+      <div>
+        <h3>Current export snapshot</h3>
+        <div id="jsonPreview" class="json-box"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="mirror_quiz_editor.js"></script>
+</body>
+</html>

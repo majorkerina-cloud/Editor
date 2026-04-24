@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirror Archetype Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow" id="heroEyebrow">Transformation quiz prototype</p>
+        <h1 id="heroTitle">Mirror Archetype Quiz</h1>
+        <p class="hero-copy" id="heroCopy">
+          Answer fifteen questions. Watch the avatar change a little at a time.
+          At the end, the mirror decides who you became.
+        </p>
+      </div>
+      <button id="restartTop" class="ghost-btn" hidden>Restart</button>
+    </header>
+
+    <main class="layout">
+      <section class="main-card">
+        <div id="startScreen" class="panel active">
+          <h2 id="startTitle">How it works</h2>
+          <p id="startCopy">
+            Each answer adds points to a family, a specific archetype, and a handful of visual tokens.
+            After question 5 and question 10, you will see how the transformation is settling in.
+          </p>
+          <ul class="info-list" id="infoList"></ul>
+          <div class="action-row">
+            <button id="startBtn" class="primary-btn">Begin</button>
+          </div>
+        </div>
+
+        <div id="quizScreen" class="panel" hidden>
+          <div class="question-topline">
+            <span id="questionCounter">Question 1 / 15</span>
+            <span id="familyHint">Family weather: unsettled</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+          <h2 id="questionPrompt"></h2>
+          <div id="answers" class="answers"></div>
+        </div>
+
+        <div id="checkpointScreen" class="panel" hidden>
+          <p class="eyebrow" id="checkpointEyebrow">Checkpoint unlocked</p>
+          <h2 id="checkpointTitle">The mirror shifts.</h2>
+          <p id="checkpointCopy"></p>
+          <div id="checkpointLook" class="look-grid"></div>
+          <div class="action-row">
+            <button id="continueBtn" class="primary-btn">Continue</button>
+          </div>
+        </div>
+
+        <div id="resultScreen" class="panel" hidden>
+          <p class="eyebrow">Final mirror result</p>
+          <h2 id="resultTitle"></h2>
+          <p id="resultSubtitle" class="result-subtitle"></p>
+          <p id="resultBlurb" class="result-blurb"></p>
+
+          <div class="result-blocks">
+            <div class="result-block">
+              <h3>Final look</h3>
+              <div id="finalLook" class="look-grid"></div>
+            </div>
+            <div class="result-block">
+              <h3>Image hints</h3>
+              <ul id="imageHints" class="pill-list"></ul>
+            </div>
+          </div>
+
+          <details class="debug-panel">
+            <summary>Debug scores</summary>
+            <div class="debug-columns">
+              <div>
+                <h4>Families</h4>
+                <pre id="debugFamilies"></pre>
+              </div>
+              <div>
+                <h4>Archetypes</h4>
+                <pre id="debugArchetypes"></pre>
+              </div>
+            </div>
+          </details>
+
+          <div class="action-row">
+            <button id="restartBtn" class="primary-btn">Take it again</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-card">
+        <h2 id="sideTitle">Transformation tracker</h2>
+        <p class="side-copy" id="sideCopy">
+          This updates as you answer. At first it is foggy. Then the mirror gets bolder.
+        </p>
+        <div id="trackerLook" class="look-grid muted"></div>
+        <div class="side-divider"></div>
+        <h3>Top family</h3>
+        <p id="topFamilyNow" class="family-pill">Unsettled</p>
+        <h3>Transformation hunger</h3>
+        <p id="hungerNow">0</p>
+      </aside>
+    </main>
+  </div>
+
+  <script src="mirror_quiz_app_refactor.js"></script>
+</body>
+</html>

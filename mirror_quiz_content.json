@@ -1,0 +1,2044 @@
+{
+  "meta": {
+    "title": "Mirror Archetype Quiz",
+    "eyebrow": "Transformation quiz prototype",
+    "heroCopy": "Answer fifteen questions. Watch the avatar change a little at a time. At the end, the mirror decides who you became.",
+    "startTitle": "How it works",
+    "startCopy": "Each answer adds points to a family, a specific archetype, and a handful of visual tokens. After question 5 and question 10, you will see how the transformation is settling in.",
+    "infoList": [
+      "Families: Hearth, Spark, Glass, Moon, Kaleido",
+      "Result pool: 19 mirror-format archetypes",
+      "Bonus route: Gender-Bendy Katsumi can unlock when the right chaos gathers"
+    ],
+    "sideTitle": "Transformation tracker",
+    "sideCopy": "This updates as you answer. At first it is foggy. Then the mirror gets bolder."
+  },
+  "families": {
+    "groups": {
+      "H": [
+        "RD",
+        "BW",
+        "CS",
+        "MA",
+        "HE"
+      ],
+      "S": [
+        "GE",
+        "SP",
+        "GY",
+        "MG"
+      ],
+      "G": [
+        "TS",
+        "KU",
+        "OL",
+        "DE"
+      ],
+      "M": [
+        "PR",
+        "SM",
+        "GD"
+      ],
+      "K": [
+        "AG",
+        "GG",
+        "KB"
+      ]
+    },
+    "names": {
+      "H": "Hearth",
+      "S": "Spark",
+      "G": "Glass",
+      "M": "Moon",
+      "K": "Kaleido"
+    }
+  },
+  "archetypeNames": {
+    "RD": "Rainy Daydreamer",
+    "TS": "Tsundere",
+    "GE": "Genki Girl",
+    "PR": "Princess",
+    "SP": "Sporty Girl",
+    "GG": "Sleepy Gamer Gremlin",
+    "MA": "Maternal",
+    "KB": "Gender-Bendy Katsumi",
+    "KU": "Kuudere",
+    "BW": "Bookworm",
+    "MG": "Magical Girl",
+    "DE": "Delinquent",
+    "GY": "Gyaru",
+    "SM": "Shrine Maiden",
+    "GD": "Goth Doll",
+    "CS": "Café Sweetheart",
+    "OL": "Office Lady",
+    "AG": "Art Girl",
+    "HE": "Healer"
+  },
+  "checkpointText": {
+    "5": {
+      "eyebrow": "Checkpoint 1",
+      "title": "The first layer settles in.",
+      "copy": "Hair, expression, and aura are beginning to choose sides. The mirror is not certain yet, but it has stopped being polite about it."
+    },
+    "10": {
+      "eyebrow": "Checkpoint 2",
+      "title": "The silhouette gets bolder.",
+      "copy": "Outfit, accessories, and posture are locking in. The transformation now has actual opinions about how you take up space."
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "prompt": "It’s a rainy day. What do you do?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Stay inside with tea and a novel.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "BW": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "outfit": [
+              "cardigan"
+            ],
+            "room": [
+              "books"
+            ],
+            "aura": [
+              "rain"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Walk with an umbrella and music, just to feel the weather.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "RD": 2,
+            "SM": 1
+          },
+          "tokens": {
+            "accessory": [
+              "ribbon",
+              "umbrella"
+            ],
+            "aura": [
+              "wet shimmer"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Go outside and stomp through puddles.",
+          "fam": {
+            "S": 2,
+            "H": 1
+          },
+          "arch": {
+            "GE": 2,
+            "SP": 1
+          },
+          "tokens": {
+            "outfit": [
+              "sporty shoes"
+            ],
+            "expression": [
+              "open"
+            ],
+            "aura": [
+              "splash energy"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Window-shop, people-watch, and let the city reflect off you.",
+          "fam": {
+            "S": 2,
+            "G": 1
+          },
+          "arch": {
+            "GY": 2,
+            "OL": 1
+          },
+          "tokens": {
+            "accessory": [
+              "gloss"
+            ],
+            "room": [
+              "city glow"
+            ],
+            "expression": [
+              "poised smile"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Game all afternoon with the storm as background noise.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "GG": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "outfit": [
+              "oversized hoodie"
+            ],
+            "room": [
+              "neon screens"
+            ],
+            "aura": [
+              "static"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Someone hands you a blank notebook. What becomes of it?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Quotes, notes, pressed flowers, tiny thoughts.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "BW": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "accessory": [
+              "gel pen"
+            ],
+            "room": [
+              "notebook stack"
+            ],
+            "aura": [
+              "paper-soft"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Outfit sketches, strange girls, color studies in the margins.",
+          "fam": {
+            "K": 2,
+            "M": 1
+          },
+          "arch": {
+            "AG": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "hair": [
+              "messy clip-up"
+            ],
+            "room": [
+              "sketch pages"
+            ],
+            "accessory": [
+              "paint smudge"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Schedules, tabs, plans, order.",
+          "fam": {
+            "G": 2,
+            "H": 1
+          },
+          "arch": {
+            "OL": 2,
+            "HE": 1
+          },
+          "tokens": {
+            "accessory": [
+              "watch"
+            ],
+            "room": [
+              "organized desk"
+            ],
+            "expression": [
+              "composed"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Stickers, jokes, challenge lists, chaotic little goals.",
+          "fam": {
+            "S": 2,
+            "K": 1
+          },
+          "arch": {
+            "GE": 2,
+            "GY": 1
+          },
+          "tokens": {
+            "accessory": [
+              "charms",
+              "stickers"
+            ],
+            "aura": [
+              "color burst"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Names you might one day want to wear.",
+          "fam": {
+            "K": 2,
+            "M": 1
+          },
+          "arch": {
+            "KB": 2,
+            "MG": 1
+          },
+          "tokens": {
+            "accessory": [
+              "mirror charm"
+            ],
+            "aura": [
+              "becoming shimmer"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Someone you love is having a bad day. What do you do?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Make tea and sit beside them quietly.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "MA": 2,
+            "HE": 1
+          },
+          "tokens": {
+            "room": [
+              "teacup"
+            ],
+            "expression": [
+              "gentle"
+            ],
+            "aura": [
+              "warmth"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Give them one sharp practical solution.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "KU": 2,
+            "OL": 1
+          },
+          "tokens": {
+            "posture": [
+              "still"
+            ],
+            "accessory": [
+              "glasses"
+            ],
+            "expression": [
+              "controlled"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Get angry on their behalf.",
+          "fam": {
+            "G": 2,
+            "S": 1
+          },
+          "arch": {
+            "DE": 2,
+            "TS": 1
+          },
+          "tokens": {
+            "accessory": [
+              "bandage"
+            ],
+            "aura": [
+              "edge"
+            ],
+            "expression": [
+              "fierce"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Drag them outside and make them laugh.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "GE": 2,
+            "SP": 1
+          },
+          "tokens": {
+            "posture": [
+              "open"
+            ],
+            "room": [
+              "bright room"
+            ],
+            "aura": [
+              "sunburst"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Promise them, very seriously, that they won’t face it alone.",
+          "fam": {
+            "M": 2,
+            "S": 1
+          },
+          "arch": {
+            "MG": 2,
+            "SM": 1
+          },
+          "tokens": {
+            "accessory": [
+              "vow charm"
+            ],
+            "aura": [
+              "luminous"
+            ],
+            "expression": [
+              "resolute"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Which room feels most like yours?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Lamp, rain, books, blankets.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "RD": 2,
+            "BW": 1
+          },
+          "tokens": {
+            "room": [
+              "blankets",
+              "rain window",
+              "stacked books"
+            ],
+            "aura": [
+              "quiet rain"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Clean vanity, ribbons, delicate light.",
+          "fam": {
+            "M": 2
+          },
+          "arch": {
+            "PR": 2,
+            "GD": 1
+          },
+          "tokens": {
+            "accessory": [
+              "ribbon"
+            ],
+            "room": [
+              "vanity"
+            ],
+            "aura": [
+              "pastel glow"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Posters, clutter, consoles, glowing screens.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "GG": 2,
+            "KB": 1
+          },
+          "tokens": {
+            "room": [
+              "console clutter",
+              "glowing screens"
+            ],
+            "outfit": [
+              "hoodie"
+            ]
+          },
+          "hunger": 1
+        },
+        {
+          "id": "D",
+          "text": "Open floor, medals, bright gear, movement.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "SP": 2,
+            "GE": 1
+          },
+          "tokens": {
+            "room": [
+              "sports gear"
+            ],
+            "outfit": [
+              "athletic fit"
+            ],
+            "aura": [
+              "motion"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Desk, shelves, city window, everything in its place.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "OL": 2,
+            "KU": 1
+          },
+          "tokens": {
+            "room": [
+              "city window",
+              "shelves"
+            ],
+            "accessory": [
+              "watch"
+            ],
+            "aura": [
+              "glass clarity"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Which compliment hits deepest?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "You make people feel safe.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "MA": 2,
+            "HE": 1
+          },
+          "tokens": {
+            "expression": [
+              "gentle smile"
+            ],
+            "aura": [
+              "safe warmth"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "You’re more beautiful than you realize.",
+          "fam": {
+            "M": 2,
+            "H": 1
+          },
+          "arch": {
+            "PR": 2,
+            "CS": 1
+          },
+          "tokens": {
+            "expression": [
+              "soft blush"
+            ],
+            "hair": [
+              "softened"
+            ],
+            "aura": [
+              "glow"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "You’re fun to be around.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "GE": 2,
+            "GY": 1
+          },
+          "tokens": {
+            "expression": [
+              "bright grin"
+            ],
+            "accessory": [
+              "playful charm"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "You notice things other people miss.",
+          "fam": {
+            "H": 2,
+            "G": 1
+          },
+          "arch": {
+            "BW": 2,
+            "AG": 1
+          },
+          "tokens": {
+            "expression": [
+              "observant"
+            ],
+            "accessory": [
+              "pen"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "You could become anything.",
+          "fam": {
+            "K": 2,
+            "M": 1
+          },
+          "arch": {
+            "KB": 2,
+            "MG": 1
+          },
+          "tokens": {
+            "aura": [
+              "becoming shimmer"
+            ],
+            "accessory": [
+              "ribbon spark"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Which accessory calls your name?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "A ribbon bookmark tucked in a novel.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "BW": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "accessory": [
+              "ribbon bookmark"
+            ],
+            "room": [
+              "books"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "A star charm compact with tiny wings.",
+          "fam": {
+            "S": 2,
+            "M": 1
+          },
+          "arch": {
+            "MG": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "accessory": [
+              "star compact"
+            ],
+            "aura": [
+              "heart sparkle"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "A spiked choker with a heart lock.",
+          "fam": {
+            "G": 2,
+            "M": 1
+          },
+          "arch": {
+            "GD": 2,
+            "DE": 1
+          },
+          "tokens": {
+            "accessory": [
+              "choker"
+            ],
+            "aura": [
+              "dark glam"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "A glossy phone charm and stacked bracelets.",
+          "fam": {
+            "S": 2,
+            "G": 1
+          },
+          "arch": {
+            "GY": 2,
+            "TS": 1
+          },
+          "tokens": {
+            "accessory": [
+              "bracelets",
+              "phone charm"
+            ],
+            "expression": [
+              "knowing smile"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "A paint-splattered hair clip.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "AG": 2,
+            "GG": 1
+          },
+          "tokens": {
+            "accessory": [
+              "painted hair clip"
+            ],
+            "hair": [
+              "messy clip-up"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "What kind of magic feels right in your hands?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Healing warmth that closes wounds.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "HE": 2,
+            "MA": 1
+          },
+          "tokens": {
+            "aura": [
+              "healing glow"
+            ],
+            "expression": [
+              "calm"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "A blade of white light held steady.",
+          "fam": {
+            "M": 2,
+            "G": 1
+          },
+          "arch": {
+            "SM": 2,
+            "MG": 1
+          },
+          "tokens": {
+            "aura": [
+              "white light"
+            ],
+            "expression": [
+              "sacred resolve"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Color that blooms into pictures.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "AG": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "accessory": [
+              "paint smear"
+            ],
+            "aura": [
+              "color sparks"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "A storm of ribbons and heart-burst sparks.",
+          "fam": {
+            "S": 2,
+            "M": 1
+          },
+          "arch": {
+            "MG": 2,
+            "GE": 1
+          },
+          "tokens": {
+            "accessory": [
+              "ribbons"
+            ],
+            "aura": [
+              "spark storm"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "A hush that freezes a room to stillness.",
+          "fam": {
+            "G": 2,
+            "M": 1
+          },
+          "arch": {
+            "KU": 2,
+            "GD": 1
+          },
+          "tokens": {
+            "aura": [
+              "stillness"
+            ],
+            "expression": [
+              "cool gaze"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "After school or work, where do you drift?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "A café, with sweets and a little private time.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "CS": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "room": [
+              "pastry box",
+              "teacup"
+            ],
+            "aura": [
+              "warm sugar"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Practice, until your body feels real again.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "SP": 2,
+            "GE": 1
+          },
+          "tokens": {
+            "outfit": [
+              "athletic fit"
+            ],
+            "accessory": [
+              "water bottle"
+            ],
+            "aura": [
+              "momentum"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Straight home to game until time blurs.",
+          "fam": {
+            "K": 2
+          },
+          "arch": {
+            "GG": 2,
+            "KB": 1
+          },
+          "tokens": {
+            "outfit": [
+              "hoodie"
+            ],
+            "room": [
+              "gaming setup"
+            ],
+            "aura": [
+              "2am neon"
+            ]
+          },
+          "hunger": 1
+        },
+        {
+          "id": "D",
+          "text": "Boutiques, mirrors, makeup counters, outfits.",
+          "fam": {
+            "S": 2,
+            "K": 1
+          },
+          "arch": {
+            "GY": 2,
+            "KB": 1
+          },
+          "tokens": {
+            "accessory": [
+              "nails",
+              "lip gloss",
+              "bag charm"
+            ]
+          },
+          "hunger": 1
+        },
+        {
+          "id": "E",
+          "text": "Home to tidy up and get tomorrow under control.",
+          "fam": {
+            "G": 2,
+            "H": 1
+          },
+          "arch": {
+            "OL": 2,
+            "MA": 1
+          },
+          "tokens": {
+            "room": [
+              "organized room"
+            ],
+            "accessory": [
+              "planner"
+            ],
+            "expression": [
+              "steady"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "How do you feel about rules?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "They’re useful until they start hurting people.",
+          "fam": {
+            "H": 2,
+            "G": 1
+          },
+          "arch": {
+            "HE": 2,
+            "MA": 1
+          },
+          "tokens": {
+            "aura": [
+              "practical mercy"
+            ],
+            "expression": [
+              "measured kindness"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "They matter when they hold ritual meaning.",
+          "fam": {
+            "M": 2
+          },
+          "arch": {
+            "SM": 2,
+            "KU": 1
+          },
+          "tokens": {
+            "outfit": [
+              "ceremonial neatness"
+            ],
+            "room": [
+              "ofuda",
+              "sacred rope"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "They’re suggestions if they cramp my style.",
+          "fam": {
+            "S": 2,
+            "G": 1
+          },
+          "arch": {
+            "GY": 2,
+            "DE": 1
+          },
+          "tokens": {
+            "expression": [
+              "swagger"
+            ],
+            "accessory": [
+              "stacked jewelry"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "They exist to be broken loudly.",
+          "fam": {
+            "G": 2,
+            "S": 1
+          },
+          "arch": {
+            "DE": 2,
+            "TS": 1
+          },
+          "tokens": {
+            "outfit": [
+              "jacket"
+            ],
+            "aura": [
+              "hot edge"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "They’re raw material for experiments.",
+          "fam": {
+            "K": 2,
+            "M": 1
+          },
+          "arch": {
+            "KB": 2,
+            "AG": 1
+          },
+          "tokens": {
+            "aura": [
+              "mirror shimmer"
+            ],
+            "accessory": [
+              "identity note"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Which mirror frame are you drawn to?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Antique gold with flowers and little scratches.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "CS": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "room": [
+              "floral gold mirror"
+            ],
+            "aura": [
+              "warm gold"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Black lacquer with moon-silver details.",
+          "fam": {
+            "M": 2,
+            "G": 1
+          },
+          "arch": {
+            "GD": 2,
+            "KU": 1
+          },
+          "tokens": {
+            "room": [
+              "black frame"
+            ],
+            "accessory": [
+              "silver accent"
+            ],
+            "aura": [
+              "nocturne"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Plain wood worn smooth by years.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "MA": 2,
+            "HE": 1
+          },
+          "tokens": {
+            "room": [
+              "sunlit wood"
+            ],
+            "aura": [
+              "linen softness"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Sleek dark frame in a city apartment.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "OL": 2,
+            "TS": 1
+          },
+          "tokens": {
+            "room": [
+              "modern apartment"
+            ],
+            "aura": [
+              "city glass"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "LED vanity frame exploding with stickers.",
+          "fam": {
+            "S": 2,
+            "K": 1
+          },
+          "arch": {
+            "GY": 2,
+            "GG": 1
+          },
+          "tokens": {
+            "room": [
+              "vanity lights",
+              "stickers"
+            ],
+            "aura": [
+              "glossy neon"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "What lighting feels right around you?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Rainy blue and one good lamp.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "RD": 2,
+            "BW": 1
+          },
+          "tokens": {
+            "room": [
+              "rain lamp"
+            ],
+            "aura": [
+              "blue hush"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Noon sun spilling over unfinished things.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "AG": 2,
+            "CS": 1
+          },
+          "tokens": {
+            "aura": [
+              "sunwash"
+            ],
+            "room": [
+              "unfinished sketches"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Candlelight and velvet dark.",
+          "fam": {
+            "M": 2
+          },
+          "arch": {
+            "GD": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "room": [
+              "candles",
+              "velvet dark"
+            ],
+            "aura": [
+              "midnight softness"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Bright practical morning light.",
+          "fam": {
+            "G": 2,
+            "H": 1
+          },
+          "arch": {
+            "OL": 2,
+            "HE": 1
+          },
+          "tokens": {
+            "room": [
+              "crisp daylight"
+            ],
+            "aura": [
+              "clear morning"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Neon and phone-screen shimmer.",
+          "fam": {
+            "S": 2,
+            "K": 1
+          },
+          "arch": {
+            "GY": 2,
+            "GG": 1
+          },
+          "tokens": {
+            "room": [
+              "neon shimmer"
+            ],
+            "aura": [
+              "electric pink-blue"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "A stranger notices you. What happens inside?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "I blush and look away, then replay it later.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "RD": 2,
+            "BW": 1
+          },
+          "tokens": {
+            "expression": [
+              "shy blush"
+            ],
+            "aura": [
+              "heartbeat hush"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "I straighten up and meet it coolly.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "KU": 2,
+            "OL": 1
+          },
+          "tokens": {
+            "expression": [
+              "cool gaze"
+            ],
+            "posture": [
+              "straightened"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "I act annoyed and think about it for hours.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "TS": 2,
+            "DE": 1
+          },
+          "tokens": {
+            "expression": [
+              "flustered glare"
+            ],
+            "aura": [
+              "hidden warmth"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "I light up immediately and flirt back a little.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "GY": 2,
+            "GE": 1
+          },
+          "tokens": {
+            "expression": [
+              "playful smile"
+            ],
+            "accessory": [
+              "gloss shine"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "It feels like destiny brushing past me.",
+          "fam": {
+            "M": 2,
+            "S": 1
+          },
+          "arch": {
+            "MG": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "aura": [
+              "destiny glint"
+            ],
+            "expression": [
+              "awe"
+            ]
+          },
+          "hunger": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "What do you make with your hands?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Cookies, tea, small beautiful comforts.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "CS": 2,
+            "MA": 1
+          },
+          "tokens": {
+            "outfit": [
+              "apron"
+            ],
+            "room": [
+              "recipe cards",
+              "flowers"
+            ],
+            "aura": [
+              "warm sugar"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Notes, marginalia, saved sentences.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "BW": 2,
+            "RD": 1
+          },
+          "tokens": {
+            "accessory": [
+              "gel pen"
+            ],
+            "room": [
+              "paper tabs",
+              "books"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Sketches, palettes, half-finished little worlds.",
+          "fam": {
+            "K": 2
+          },
+          "arch": {
+            "AG": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "accessory": [
+              "palette"
+            ],
+            "room": [
+              "pinned art"
+            ],
+            "aura": [
+              "color dust"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Bandages, remedies, steadiness.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "HE": 2,
+            "MA": 1
+          },
+          "tokens": {
+            "room": [
+              "lavender jars",
+              "rolled towels"
+            ],
+            "expression": [
+              "steady hands"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Looks, selfies, polished impressions.",
+          "fam": {
+            "S": 2,
+            "K": 1
+          },
+          "arch": {
+            "GY": 2,
+            "KB": 1
+          },
+          "tokens": {
+            "accessory": [
+              "makeup",
+              "nails",
+              "sparkling phone"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "What music finds you first?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Soft piano and rain-muted vocals.",
+          "fam": {
+            "H": 2,
+            "M": 1
+          },
+          "arch": {
+            "RD": 2,
+            "BW": 1
+          },
+          "tokens": {
+            "aura": [
+              "wistful rain"
+            ],
+            "hair": [
+              "loose waves"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "Bright pop that makes the room too small for your energy.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "GE": 2,
+            "GY": 1
+          },
+          "tokens": {
+            "expression": [
+              "bouncy grin"
+            ],
+            "aura": [
+              "color pulse"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "Orchestral swells with vows inside them.",
+          "fam": {
+            "M": 2,
+            "S": 1
+          },
+          "arch": {
+            "MG": 2,
+            "SM": 1
+          },
+          "tokens": {
+            "aura": [
+              "star vow"
+            ],
+            "accessory": [
+              "ceremonial ribbon"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "Dark waltz, lace, and beautiful melancholy.",
+          "fam": {
+            "M": 2
+          },
+          "arch": {
+            "GD": 2,
+            "PR": 1
+          },
+          "tokens": {
+            "accessory": [
+              "lace accent"
+            ],
+            "aura": [
+              "silver gloom"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "Lo-fi, game tracks, and 2 AM synth haze.",
+          "fam": {
+            "K": 2,
+            "H": 1
+          },
+          "arch": {
+            "GG": 2,
+            "KB": 1
+          },
+          "tokens": {
+            "room": [
+              "late-night screens"
+            ],
+            "aura": [
+              "sleepy static"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "In the final mirror, what changes do you notice first?",
+      "answers": [
+        {
+          "id": "A",
+          "text": "My eyes look softer, kinder, more capable of holding people.",
+          "fam": {
+            "H": 2
+          },
+          "arch": {
+            "HE": 2,
+            "MA": 1,
+            "CS": 1
+          },
+          "tokens": {
+            "expression": [
+              "gentle eyes"
+            ],
+            "aura": [
+              "warm pulse"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "B",
+          "text": "My silhouette looks elegant enough to feel almost unreal.",
+          "fam": {
+            "M": 2
+          },
+          "arch": {
+            "PR": 2,
+            "GD": 1
+          },
+          "tokens": {
+            "hair": [
+              "flowing"
+            ],
+            "outfit": [
+              "lace line"
+            ],
+            "posture": [
+              "poised"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "C",
+          "text": "I look like I’m about to run toward life.",
+          "fam": {
+            "S": 2
+          },
+          "arch": {
+            "GE": 2,
+            "SP": 1
+          },
+          "tokens": {
+            "posture": [
+              "forward momentum"
+            ],
+            "outfit": [
+              "sporty fit"
+            ],
+            "aura": [
+              "sunburst"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "D",
+          "text": "I look sharper, prettier, and harder to fool.",
+          "fam": {
+            "G": 2
+          },
+          "arch": {
+            "TS": 2,
+            "KU": 1,
+            "OL": 1
+          },
+          "tokens": {
+            "outfit": [
+              "clean lines"
+            ],
+            "expression": [
+              "controlled mouth"
+            ],
+            "aura": [
+              "cool polish"
+            ]
+          },
+          "hunger": 0
+        },
+        {
+          "id": "E",
+          "text": "I look like someone who could become stranger still.",
+          "fam": {
+            "K": 2,
+            "M": 1
+          },
+          "arch": {
+            "KB": 2,
+            "AG": 1
+          },
+          "tokens": {
+            "aura": [
+              "mirror shimmer"
+            ],
+            "accessory": [
+              "asymmetry charm"
+            ]
+          },
+          "hunger": 1
+        }
+      ]
+    }
+  ],
+  "resultCards": {
+    "RD": {
+      "title": "Rainy Daydreamer",
+      "subtitle": "Soft weather, softer edges",
+      "testBlurb": "Rain taps the glass while lamplight pools around you. This is placeholder text for testing card length, line wrapping, spacing, and how a wistful result feels when it lands.",
+      "imageHints": [
+        "rain window",
+        "lamplight",
+        "cardigan",
+        "soft eyes",
+        "books"
+      ]
+    },
+    "TS": {
+      "title": "Tsundere",
+      "subtitle": "Sharp shell, glowing center",
+      "testBlurb": "You fold your arms, look away, and absolutely do not admit you care. This is placeholder text for testing a prickly result card with enough room for warmth to leak through.",
+      "imageHints": [
+        "blush",
+        "glare",
+        "cropped jacket",
+        "messy charm",
+        "hidden softness"
+      ]
+    },
+    "GE": {
+      "title": "Genki Girl",
+      "subtitle": "Momentum in a smile",
+      "testBlurb": "The room gets too small for your energy and the mirror can barely keep up. This is placeholder text for checking bright, playful pacing and a more kinetic result-card rhythm.",
+      "imageHints": [
+        "bright grin",
+        "motion",
+        "scrunchie",
+        "sporty shoes",
+        "sunburst aura"
+      ]
+    },
+    "PR": {
+      "title": "Princess",
+      "subtitle": "Grace that feels almost unreal",
+      "testBlurb": "Your reflection looks like a fairytale discovering it has a pulse. This is placeholder text for testing elegant result copy with enough softness, glow, and breathing room to feel luminous.",
+      "imageHints": [
+        "flowing hair",
+        "ribbons",
+        "delicate mirror",
+        "soft glow",
+        "elegant silhouette"
+      ]
+    },
+    "SP": {
+      "title": "Sporty Girl",
+      "subtitle": "Alive in motion",
+      "testBlurb": "You look like someone who trusts her own body and likes the feeling of effort. This is placeholder text for testing an energetic athletic result with room for confidence and joy.",
+      "imageHints": [
+        "athletic fit",
+        "sweat shine",
+        "sports gear",
+        "short hair or tied hair",
+        "movement"
+      ]
+    },
+    "GG": {
+      "title": "Sleepy Gamer Gremlin",
+      "subtitle": "Neon refuge, soft chaos",
+      "testBlurb": "The glow of screens, the nest of blankets, the quietly cursed little snacks. This is placeholder text for testing a cozy clutter result card with late-night softness and goblin energy.",
+      "imageHints": [
+        "hoodie",
+        "multi-monitor glow",
+        "headset",
+        "snacks",
+        "soft clutter"
+      ]
+    },
+    "MA": {
+      "title": "Maternal",
+      "subtitle": "Warmth with structure",
+      "testBlurb": "You look like the person people exhale around without always realizing why. This is placeholder text for testing a mature, sheltering result with steady emotional gravity and domestic calm.",
+      "imageHints": [
+        "apron",
+        "brush",
+        "tidy room",
+        "straight hair",
+        "warm domestic light"
+      ]
+    },
+    "KB": {
+      "title": "Gender-Bendy Katsumi",
+      "subtitle": "Cute menace, delighted becoming",
+      "testBlurb": "Something in the mirror grins like it has been waiting for this exact excuse to happen. This is placeholder text for testing the bonus route with playful danger, fandom clutter, and identity sparks.",
+      "imageHints": [
+        "mirror charm",
+        "blue hair or wild color",
+        "fandom room",
+        "cute menace",
+        "becoming aura"
+      ]
+    },
+    "KU": {
+      "title": "Kuudere",
+      "subtitle": "Still water, hidden weather",
+      "testBlurb": "You meet your own gaze like it is a contract you already intend to honor. This is placeholder text for testing a cool, elegant result card with restraint, poise, and one leak of tenderness.",
+      "imageHints": [
+        "cool gaze",
+        "sleek outfit",
+        "city lights",
+        "tidy room",
+        "silver-blue palette"
+      ]
+    },
+    "BW": {
+      "title": "Bookworm",
+      "subtitle": "Paper-hearted and observant",
+      "testBlurb": "The pages pile up around you like quiet witnesses to a life of noticing. This is placeholder text for testing a thoughtful result with enough space for intelligence, gentleness, and inwardness.",
+      "imageHints": [
+        "gel pen",
+        "books",
+        "messy hair",
+        "soft smile",
+        "warm reading light"
+      ]
+    },
+    "MG": {
+      "title": "Magical Girl",
+      "subtitle": "A vow made visible",
+      "testBlurb": "The mirror catches you at the moment hope stops being abstract and puts on a shape. This is placeholder text for testing a luminous result with symbolic weight, sparkle, and brave softness.",
+      "imageHints": [
+        "star charm",
+        "ribbons",
+        "heart sparks",
+        "bright eyes",
+        "destiny glow"
+      ]
+    },
+    "DE": {
+      "title": "Delinquent",
+      "subtitle": "Rough edge, loyal fire",
+      "testBlurb": "You look like trouble until someone stands behind you long enough to learn better. This is placeholder text for testing a rebellious result with heat, swagger, and a hidden protective core.",
+      "imageHints": [
+        "orange hair",
+        "jacket",
+        "bandage",
+        "sneakers",
+        "defiant stare"
+      ]
+    },
+    "GY": {
+      "title": "Gyaru",
+      "subtitle": "Style with nerve",
+      "testBlurb": "Every detail says you chose to be seen and meant it. This is placeholder text for testing a glossy, fashion-forward result card with charisma, color, and social sparkle.",
+      "imageHints": [
+        "gloss",
+        "bracelets",
+        "styled hair",
+        "vanity lights",
+        "fashion clutter"
+      ]
+    },
+    "SM": {
+      "title": "Shrine Maiden",
+      "subtitle": "Ritual grace, steady hands",
+      "testBlurb": "The room quiets itself around you, as if even the air understands ceremony. This is placeholder text for testing a sacred, composed result with tradition, poise, and hidden softness.",
+      "imageHints": [
+        "miko outfit",
+        "traditional room",
+        "shrine details",
+        "white-red palette",
+        "composure"
+      ]
+    },
+    "GD": {
+      "title": "Goth Doll",
+      "subtitle": "Lace-shadow wonder",
+      "testBlurb": "You look like a secret kept in velvet and silver, surprised to be alive in the glass. This is placeholder text for testing a darkly elegant result with lace, candles, and delicate melancholy.",
+      "imageHints": [
+        "silver hair",
+        "lace dress",
+        "black mirror",
+        "candles",
+        "surprised expression"
+      ]
+    },
+    "CS": {
+      "title": "Café Sweetheart",
+      "subtitle": "Hospitality with a pulse",
+      "testBlurb": "The mirror makes you look like someone who knows how to make a room gentler. This is placeholder text for testing a warm, romantic result with pastries, ribbons, and softly curated charm.",
+      "imageHints": [
+        "apron",
+        "pastry",
+        "teacup",
+        "honey-blonde hair",
+        "warm wood tones"
+      ]
+    },
+    "OL": {
+      "title": "Office Lady",
+      "subtitle": "Urban polish, private weather",
+      "testBlurb": "Everything is in place, but your reflection still carries a life happening underneath the order. This is placeholder text for testing a mature, polished result with structure, beauty, and restraint.",
+      "imageHints": [
+        "skirt suit",
+        "home office",
+        "city window",
+        "light blue hair",
+        "organized desk"
+      ]
+    },
+    "AG": {
+      "title": "Art Girl",
+      "subtitle": "Creative overflow, soft feral charm",
+      "testBlurb": "Paint on your fingers, ideas in your pockets, and sunlight landing where it pleases. This is placeholder text for testing a messy-sweet result with color, inspiration, and adorable studio chaos.",
+      "imageHints": [
+        "apricot-copper hair",
+        "paint smudge",
+        "sketches",
+        "brushes",
+        "sunlit studio"
+      ]
+    },
+    "HE": {
+      "title": "Healer",
+      "subtitle": "Calm made beautiful",
+      "testBlurb": "You look like someone who notices pain without flinching away from it. This is placeholder text for testing a mature caretaker result with softness, competence, and restorative light.",
+      "imageHints": [
+        "purple hair",
+        "glasses",
+        "healing items",
+        "clean room",
+        "gentle posture"
+      ]
+    }
+  }
+}
